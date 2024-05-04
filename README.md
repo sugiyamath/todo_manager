@@ -43,7 +43,10 @@ Commands:
 
 
 ## Example
+
+```bash
 ./todo.py add "Write README.md"
 ./todo.py list
 ./todo.py do 0
 ./todo.py done 0
+```
