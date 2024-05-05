@@ -1,16 +1,18 @@
-# GUIコード
 import tkinter as tk
 import todo
+
 
 def refresh_listbox():
     listbox.delete(0, tk.END)
     for item in todo.TODO_LIST:
         listbox.insert(tk.END, item)
 
+
 def refresh_history():
     history.delete(0, tk.END)
     for item in todo.HISTORY[::-1]:
         history.insert(tk.END, item)
+
 
 def add_item():
     item = entry.get()
@@ -18,6 +20,7 @@ def add_item():
         todo.add_todo(item)
         entry.delete(0, tk.END)
         refresh_listbox()
+
 
 def do_item():
     try:
@@ -27,7 +30,8 @@ def do_item():
         refresh_history()
     except:
         pass
-    
+
+
 def done_item():
     try:
         index = listbox.curselection()[0]

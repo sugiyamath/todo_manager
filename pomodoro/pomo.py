@@ -2,6 +2,7 @@ import time
 import pygame
 from datetime import datetime
 
+
 class PomodoroTimer:
     def __init__(self, sound_file):
         self.sound_file = sound_file
@@ -35,6 +36,7 @@ class PomodoroTimer:
                 self.play_sound()
             self.previous_flag = flag
             time.sleep(1)
+
 
 if __name__ == "__main__":
     timer = PomodoroTimer('bell.wav')
